@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:19:36 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/20 16:20:05 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:40:37 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	main( void )
 {
+	Bureaucrat tt ("polo", 45);
+	
+	std::cout << tt << std::endl;
 	return (0);
 }
