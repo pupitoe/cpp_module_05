@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:15 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/22 14:49:36 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/24 15:25:08 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ class	Bureaucrat
 {
 	private:
 		std::string	const	name;
-		int		grade; // best is 1, low is 150
-	
+		int					grade; // best is 1, low is 150
+
+		void	throwGrade( int const grad ) const;
+
 	public:
 		Bureaucrat( std::string const name, int const grade );
 		~Bureaucrat( void );
@@ -32,7 +34,6 @@ class	Bureaucrat
 		std::string	getName( void ) const;
 		void		upGrade( int const up );
 		void		downGrade( int const down );
-		void		throwGrade( int const grad ) const;
 
 		class	GradeTooHighException: public std::exception
 		{
