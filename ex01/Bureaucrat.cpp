@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:08 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/22 15:40:26 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/24 19:04:27 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,16 @@ const char	*Bureaucrat::GradeTooLowException::what(void) const throw()
 const char	*Bureaucrat::GradeTooHighException::what(void) const throw()
 {
 	return ("Grade is to High max is 1");
+}
+
+void	Bureaucrat::signForm(Form& form)
+{
+	if (this->grade <= form.getGSigned())
+	{
+		std::cout << this->name << " signed " << form.getName() << std::endl;
+		form.beSigned(*this);
+	}
+	else
+		std::cout << this->name << " couldn't sign " << form.getName()
+			<< " because grade is to low" << std::endl;
 }
