@@ -13,7 +13,7 @@
 #include "AForm.hpp"
 
 AForm::AForm(std::string const name, int const g_signed, int const g_execute):
-	_name(name), _grade_signed(g_signed), _grade_execute(g_execute)
+	_name(name), _grade_signed(g_signed), _grade_execute(g_execute),
 {
 	this->throwGrade(g_signed);		
 	this->throwGrade(g_execute);		
@@ -88,7 +88,7 @@ const char	*AForm::GradeTooHighException::what(void) const throw()
 	return (this->_reson);
 }
 
-void	AForm::throwGrade( int const grade )const
+void	AForm::throwGrade( int const grade ) const
 {
 	if (grade > 150)
 		throw
@@ -108,4 +108,15 @@ std::ostream&	operator<<(std::ostream& o, AForm const& form)
 const char	*AForm::IsNotSigned::what(void) const throw()
 {
 	return ("This form is not signed :(");
+}
+
+void	AForm::throwExecute(void) const
+{
+	throw	AForm::
+		GradeTooLowException("Your grade is to low to execute this Form");
+}
+
+void	AForm::throwSigned(void) const
+{
+	throw AForm::IsNotSigned();
 }

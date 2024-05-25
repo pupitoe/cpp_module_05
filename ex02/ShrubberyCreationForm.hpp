@@ -6,17 +6,21 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:12:41 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 14:46:51 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:21:32 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
-#include "AForm.hpp"
+# include "AForm.hpp"
+# include <fstream>
 
 class ShrubberyCreationForm: public AForm
 {
+	private:
+		std::string	const _target;
+
 	public:
 		ShrubberyCreationForm( std::string const target );
 		~ShrubberyCreationForm( void );
@@ -24,6 +28,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm& operator=( ShrubberyCreationForm const& cpy );
 
 		void	execute(Bureaucrat const& executor) const;
+		void	makeTree(std::string target) const;
 };
 
 #endif

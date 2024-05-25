@@ -28,7 +28,8 @@ class	AForm
 		void	throwGrade( int const grad ) const;
 
 	protected:
-		std::string	target;
+		void	throwSigned( void ) const;
+		void	throwExecute( void ) const;
 
 	public:
 		AForm(std::string const name, int const g_signed, int const g_execute);

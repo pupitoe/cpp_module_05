@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:08 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/24 19:35:47 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:08:29 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ const char	*Bureaucrat::GradeTooHighException::what(void) const throw()
 	return ("Grade is to High max is 1");
 }
 
-void	Bureaucrat::signForm(Form& form)
+void	Bureaucrat::signForm(AForm& form)
 {
 	if (this->grade <= form.getGSigned())
 	{
