@@ -70,7 +70,8 @@ class	AForm
 				virtual const char	*what(void) const throw();
 		};
 
-		virtual void execute(Bureaucrat const & executor) const = 0;
+		virtual void	execute(Bureaucrat const & executor) const = 0;
+		void			checkExecute(Bureaucrat const& executor) const;
 };
 
 std::ostream&	operator<<(std::ostream& o, AForm const& form);

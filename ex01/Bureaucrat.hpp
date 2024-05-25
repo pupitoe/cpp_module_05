@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:15 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/24 19:00:27 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:44:31 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class	Bureaucrat
 		void		upGrade( int const up );
 		void		downGrade( int const down );
 
-		void	signForm(Form& form);
+		void	signForm(Form& form) const;
 
 		class	GradeTooHighException: public std::exception
 		{

@@ -120,3 +120,12 @@ void	AForm::throwSigned(void) const
 {
 	throw AForm::IsNotSigned();
 }
+
+
+void	AForm::checkExecute(Bureaucrat const& executor) const
+{
+	if (this->getSigned() == false)
+		this->throwSigned();
+	if (executor.getGrade() > this->getGExecute())
+		this->throwExecute();
+}

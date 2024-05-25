@@ -6,14 +6,14 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:12:27 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 17:58:14 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:41:12 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( void ):
-	AForm("Shrubbery", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm( std::string const target ):
+	AForm("Shrubbery", 145, 137), _target(target)
 {
 	return ;
 }
@@ -24,7 +24,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm( void )
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& cpy):
-	AForm(cpy)
+	AForm(cpy), _target(cpy._target)
 {
 	return ;	
 }
@@ -38,12 +38,9 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm
 
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (this->getSigned() == false)
-		this->throwSigned();
-	if (executor.getGrade() > this->getGExecute())
-		this->throwExecute();
+	this->checkExecute(executor);
 
-	this->makeTree(executor.getName());
+	this->makeTree(this->_target);
 }
 
 void	ShrubberyCreationForm::makeTree(std::string target) const
