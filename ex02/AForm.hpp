@@ -27,9 +27,12 @@ class	AForm
 
 		void	throwGrade( int const grad ) const;
 
+	protected:
+		std::string	target;
+
 	public:
 		AForm(std::string const name, int const g_signed, int const g_execute);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm(AForm const& cpy);
 		AForm& operator=(AForm const& cpy);
 
@@ -59,6 +62,14 @@ class	AForm
 				GradeTooLowException(char const *reson);
 				virtual const char	*what(void) const throw();
 		};
+
+		class	IsNotSigned: public std::exception
+		{
+			public:
+				virtual const char	*what(void) const throw();
+		};
+
+		virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream&	operator<<(std::ostream& o, AForm const& form);

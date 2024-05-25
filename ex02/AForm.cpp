@@ -104,3 +104,8 @@ std::ostream&	operator<<(std::ostream& o, AForm const& form)
 		<< form.getGSigned() << ", grade to execute: " << form.getGExecute();
 	return (o);
 }
+
+const char	*AForm::IsNotSigned::what(void) const throw()
+{
+	return ("This form is not signed :(");
+}
