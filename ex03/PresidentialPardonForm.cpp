@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:22 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:40:56 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/25 23:32:05 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ PresidentialPardonForm::~PresidentialPardonForm( void )
 	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const& cpy):
-	AForm(cpy), _target(cpy._target)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm
+	const& cpy): AForm(cpy), _target(cpy._target)
 {
 	return ;	
 }
