@@ -13,7 +13,7 @@
 #include "AForm.hpp"
 
 AForm::AForm(std::string const name, int const g_signed, int const g_execute):
-	_name(name), _grade_signed(g_signed), _grade_execute(g_execute),
+	_name(name), _grade_signed(g_signed), _grade_execute(g_execute)
 {
 	this->throwGrade(g_signed);		
 	this->throwGrade(g_execute);		
