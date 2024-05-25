@@ -71,6 +71,7 @@ class	AForm
 		};
 
 		virtual void	execute(Bureaucrat const & executor) const = 0;
+		virtual AForm	*clone(std::string const& target) const = 0;
 		void			checkExecute(Bureaucrat const& executor) const;
 };
 

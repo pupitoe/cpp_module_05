@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:11:18 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:41:06 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 01:17:31 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,21 @@ void	RobotomyResquestForm::execute(Bureaucrat const & executor) const
 	std::cout << "BRRRRRRRRRRRRRRRRRRRRRRRRR.........." << std::endl;
 	std::cout << this->_target << " your robotisation are " <<
 		((std::rand() % 2) ? "sucess" : "fail") << std::endl;
+}
+
+RobotomyResquestForm	*RobotomyResquestForm::clone(
+		std::string const& target) const
+{
+	RobotomyResquestForm	*clone;
+
+	clone = NULL;
+	try
+	{
+		clone = new RobotomyResquestForm(target);
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return (clone);
 }

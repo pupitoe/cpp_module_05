@@ -6,14 +6,14 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:22 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 23:34:09 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 00:51:46 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const target):
-	AForm("Roboto", 25, 5), _target(target)
+	AForm("Presidential", 25, 5), _target(target)
 {
 	return ;
 }

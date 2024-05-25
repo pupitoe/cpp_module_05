@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:12:27 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:41:12 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 01:19:03 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,21 @@ void	ShrubberyCreationForm::makeTree(std::string target) const
 		output << "  ______/____\\____\n";
 		output.close();
 	}
+}
+
+ShrubberyCreationForm	*ShrubberyCreationForm::clone(
+		std::string const& target) const
+{
+	ShrubberyCreationForm	*clone;
+
+	clone = NULL;
+	try
+	{
+		clone = new ShrubberyCreationForm(target);
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return (clone);
 }

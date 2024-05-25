@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:35 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:14:40 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 01:10:56 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm( PresidentialPardonForm const& cpy );
 		PresidentialPardonForm& operator=( PresidentialPardonForm const& cpy );
 
-		void	execute(Bureaucrat const& executor) const;
+		void					execute(Bureaucrat const& executor) const;
+		PresidentialPardonForm	*clone(std::string const& clone) const;
 };
 
 

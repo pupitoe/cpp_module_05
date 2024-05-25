@@ -6,14 +6,14 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:22 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 23:32:05 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 01:16:51 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const target):
-	AForm("Roboto", 25, 5), _target(target)
+	AForm("Presidential", 25, 5), _target(target)
 {
 	return ;
 }
@@ -42,4 +42,21 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 
 	std::cout << this->_target <<
 		" you have been pardoned by Zaphod Beeblebrox. " << std::endl;
+}
+
+PresidentialPardonForm	*PresidentialPardonForm::clone(
+		std::string const& target) const
+{
+	PresidentialPardonForm	*clone;
+
+	clone = NULL;
+	try
+	{
+		clone = new PresidentialPardonForm(target);
+	}
+	catch(const std::bad_alloc& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return (clone);
 }
