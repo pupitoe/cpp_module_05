@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:15 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:45:13 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 18:13:09 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ class	Bureaucrat
 		class	GradeTooHighException: public std::exception
 		{
 			public:
-				virtual const char	*what(void) const throw();
+				const char	*what(void) const throw();
 		};
 		class	GradeTooLowException: public std::exception
 		{
 			public:
-				virtual const char	*what(void) const throw();
+				const char	*what(void) const throw();
 		};
 		void	executeForm(AForm const & form) const;
 };
