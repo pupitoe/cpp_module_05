@@ -51,7 +51,7 @@ class	AForm
 
 			public:
 				GradeTooHighException(char const *reson);
-				virtual const char	*what(void) const throw();
+				const char	*what(void) const throw();
 		};
 
 		class	GradeTooLowException: public std::exception
@@ -61,13 +61,13 @@ class	AForm
 
 			public:
 				GradeTooLowException(char const *reson);
-				virtual const char	*what(void) const throw();
+				const char	*what(void) const throw();
 		};
 
 		class	IsNotSigned: public std::exception
 		{
 			public:
-				virtual const char	*what(void) const throw();
+				const char	*what(void) const throw();
 		};
 
 		virtual void	execute(Bureaucrat const & executor) const = 0;

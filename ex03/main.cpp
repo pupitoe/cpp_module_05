@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:19:36 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 17:43:49 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 18:09:27 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main( void )
 	{
 		try
 		{
-			Bureaucrat	tomy("tommy", 16);
+			Bureaucrat	tomy("tommy", 5);
 			tomy.signForm(*presiden);
 			tomy.executeForm(*presiden);
 		}
@@ -67,6 +67,15 @@ int	main( void )
 	{
 		try
 		{
+			Bureaucrat	tomy("General robot", 150);
+			robot->beSigned(tomy);
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+		try
+		{
 			Bureaucrat	tomy("General robot", 16);
 			tomy.signForm(*robot);
 			tomy.executeForm(*robot);
@@ -82,6 +91,15 @@ int	main( void )
 		try
 		{
 			Bureaucrat	tomy("Ice in to plastic", 16);
+			shrubbery->execute(tomy);
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+		try
+		{
+			Bureaucrat	tomy("Ice in to plastic", 16);
 			tomy.signForm(*shrubbery);
 			tomy.executeForm(*shrubbery);
 		}
@@ -92,4 +110,6 @@ int	main( void )
 		delete shrubbery;
 	}
 	std::cout << "ptr pf DoNotExist: " << doNotExist << std::endl;
+	if (doNotExist)
+		delete doNotExist;
 }
