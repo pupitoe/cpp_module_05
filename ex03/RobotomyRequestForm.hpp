@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:11:27 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 01:18:26 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 17:48:43 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class RobotomyResquestForm: public AForm
 		RobotomyResquestForm& operator=( RobotomyResquestForm const& cpy );
 
 		void	execute(Bureaucrat const& executor) const;
+
 		RobotomyResquestForm	*clone(std::string const& clone) const;
 };
 
