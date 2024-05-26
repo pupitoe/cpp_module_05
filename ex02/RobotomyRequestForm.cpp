@@ -6,14 +6,14 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:11:18 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:41:06 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 17:05:38 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyResquestForm::RobotomyResquestForm(std::string const target):
-	AForm("Roboto", 72, 45), _target(target)
+	AForm("robotomy resquest", 72, 45), _target(target)
 {
 	return ;
 }

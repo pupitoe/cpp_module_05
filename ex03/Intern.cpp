@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 23:23:56 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 02:13:38 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/26 16:59:34 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,10 @@ AForm	*Intern::makeForm( std::string const& name,
 	while (i < SIZE_FORM && form == NULL)
 	{
 		if (this->tab[i]->getName() == name)
+		{
+			std::cout << "Intern creates " << name << std::endl;
 			form = this->tab[i]->clone(target);
+		}
 	}
 	return (form);
 }
