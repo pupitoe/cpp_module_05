@@ -6,11 +6,16 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:20:19 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/24 19:17:22 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 19:04:18 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form( void ): _name(""), _grade_signed(1), _grade_execute(1)
+{
+	return ;
+}
 
 Form::Form(std::string const name, int const g_signed, int const g_execute):
 	_name(name), _grade_signed(g_signed), _grade_execute(g_execute)

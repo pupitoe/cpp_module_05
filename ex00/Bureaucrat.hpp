@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:15 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 18:10:46 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:55:02 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class	Bureaucrat
 		int					grade; // best is 1, low is 150
 
 		void	throwGrade( int const grad ) const;
+		Bureaucrat( void );
 
 	public:
 		Bureaucrat( std::string const name, int const grade );

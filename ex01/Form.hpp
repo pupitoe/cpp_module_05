@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:20:29 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 18:12:27 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:58:07 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class	Form
 		int const			_grade_execute;
 
 		void	throwGrade( int const grad ) const;
+		Form(void);
 
 	public:
 		Form(std::string const name, int const g_signed, int const g_execute);

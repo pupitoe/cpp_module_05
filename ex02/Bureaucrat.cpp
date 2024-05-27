@@ -6,12 +6,16 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:08 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 23:00:13 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:56:44 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+Bureaucrat::Bureaucrat( void )
+{
+	return ;
+}
 
 Bureaucrat::Bureaucrat( std::string const name, int const grade ): name(name)
 {

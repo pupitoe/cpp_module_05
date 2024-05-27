@@ -6,11 +6,17 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:22 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 17:05:58 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 19:06:16 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
+
+PresidentialPardonForm::PresidentialPardonForm(void):
+	AForm("presidential pardon", 25, 5), _target("")
+{
+	return ;
+}
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const target):
 	AForm("presidential pardon", 25, 5), _target(target)

@@ -26,6 +26,7 @@ class	AForm
 		int const			_grade_execute;
 
 		void	throwGrade( int const grad ) const;
+		AForm( void );
 
 	protected:
 		void	throwSigned( void ) const;

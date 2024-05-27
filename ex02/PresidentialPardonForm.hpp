@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:10:35 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 02:14:47 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:59:13 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class PresidentialPardonForm: public AForm
 {
 	private:
 		std::string	const _target;
+		PresidentialPardonForm( void );
 
 	public:
 		PresidentialPardonForm(std::string const target);

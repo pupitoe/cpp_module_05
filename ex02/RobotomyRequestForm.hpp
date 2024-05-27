@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 14:11:27 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/25 22:07:35 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/05/27 19:01:01 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class RobotomyResquestForm: public AForm
 {
 	private:
 		std::string	const _target;
+		RobotomyResquestForm(void);
 
 	public:
 		RobotomyResquestForm(std::string const target);

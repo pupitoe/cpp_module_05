@@ -12,6 +12,11 @@
 
 #include "AForm.hpp"
 
+AForm::AForm( void ): _name(""), _grade_signed(0), _grade_execute(0)
+{
+	return ;
+}
+
 AForm::AForm(std::string const name, int const g_signed, int const g_execute):
 	_name(name), _grade_signed(g_signed), _grade_execute(g_execute)
 {
