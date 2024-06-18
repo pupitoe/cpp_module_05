@@ -6,7 +6,7 @@
 /*   By: tlassere <tlassere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 23:22:05 by tlassere          #+#    #+#             */
-/*   Updated: 2024/05/26 01:20:29 by tlassere         ###   ########.fr       */
+/*   Updated: 2024/06/18 15:19:51 by tlassere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ class	Intern
 		ShrubberyCreationForm	shru;
 		AForm	*tab[SIZE_FORM];
 
+		Intern( Intern const& cpy );
+		Intern&	operator=( Intern const& cpy );
+
 	public:
 		Intern(void);
 		~Intern(void);
-		Intern( Intern const& cpy );
-		Intern&	operator=( Intern const& cpy );
 
 		AForm	*makeForm(std::string const& name,
 			std::string const& target) const;
